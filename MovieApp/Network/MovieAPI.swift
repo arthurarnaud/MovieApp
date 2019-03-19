@@ -9,14 +9,14 @@
 import Foundation
 import Moya
 
-enum MovieApi {
+enum MovieAPI {
     case nowPlaying(page: Int)
     case popular(page: Int)
     case upcoming(page: Int)
     case recommended(id: Int)
 }
 
-extension MovieApi: TargetType {
+extension MovieAPI: TargetType {
     
     var baseURL: URL {
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else {

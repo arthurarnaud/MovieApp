@@ -19,6 +19,8 @@
 		DA3764D82241619500A4FC37 /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764D72241619500A4FC37 /* MovieAppUITests.swift */; };
 		DA3764E722416B8F00A4FC37 /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764E622416B8F00A4FC37 /* MovieAPI.swift */; };
 		DA3764E922416EC700A4FC37 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764E822416EC700A4FC37 /* NetworkManager.swift */; };
+		DA3764EC22417BE700A4FC37 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764EB22417BE700A4FC37 /* Movie.swift */; };
+		DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764ED22417E4F00A4FC37 /* MovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		DA3764D92241619500A4FC37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA3764E622416B8F00A4FC37 /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
 		DA3764E822416EC700A4FC37 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DA3764EB22417BE700A4FC37 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DA3764ED22417E4F00A4FC37 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 		DA3764B62241619400A4FC37 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA3764EA2241796D00A4FC37 /* Models */,
 				DA3764E522416A6F00A4FC37 /* Network */,
 				DA3764B72241619400A4FC37 /* AppDelegate.swift */,
 				DA3764B92241619400A4FC37 /* ViewController.swift */,
@@ -164,6 +169,15 @@
 				DA3764E822416EC700A4FC37 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DA3764EA2241796D00A4FC37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA3764EB22417BE700A4FC37 /* Movie.swift */,
+				DA3764ED22417E4F00A4FC37 /* MovieResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E008BD54B21EF85C41D3772F /* Pods */ = {
@@ -394,9 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3764E922416EC700A4FC37 /* NetworkManager.swift in Sources */,
+				DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */,
 				DA3764E722416B8F00A4FC37 /* MovieAPI.swift in Sources */,
 				DA3764BA2241619400A4FC37 /* ViewController.swift in Sources */,
 				DA3764B82241619400A4FC37 /* AppDelegate.swift in Sources */,
+				DA3764EC22417BE700A4FC37 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

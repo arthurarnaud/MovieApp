@@ -9,11 +9,21 @@
 import Foundation
 import Moya
 
-struct NetworkManager {
+protocol Networking {}
+
+extension Networking {
+    func request(target: MovieAPI, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (Error) -> Void) {
+        NetworkManager.shared.request(target: target, success: successCallback, error: errorCallback)
+    }
+}
+
+class NetworkManager {
+    static let shared = NetworkManager()
     static let MovieAPIKey = "fb3efb05e2a2669024f48db596b3f3d0"
-    static let provider = MoyaProvider<MovieApi>()
     
-    static func request(target: MovieApi, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (MoyaError) -> Void) {
+    private let provider = MoyaProvider<MovieAPI>()
+    
+    func request(target: MovieAPI, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (MoyaError) -> Void) {
 
         provider.request(target) { (result) in
             switch result {

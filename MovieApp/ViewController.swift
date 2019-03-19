@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Networking {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        request(target: .nowPlaying(page: 1), success: { (response) in
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let results = try decoder.decode(MovieResponse.self, from: response.data)
+                print(results.results)
+            }catch let err{
+                print(err)
+            }
+        }) { (error) in
+            print(error)
+        }
     }
 
 
