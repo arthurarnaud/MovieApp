@@ -14,14 +14,7 @@ class ViewController: UIViewController, Networking {
         super.viewDidLoad()
         
         request(target: .nowPlaying(page: 1), success: { (response) in
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let results = try decoder.decode(MovieResponse.self, from: response.data)
-                print(results.results)
-            }catch let err{
-                print(err)
-            }
+            print(response.results)
         }) { (error) in
             print(error)
         }

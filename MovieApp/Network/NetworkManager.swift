@@ -12,7 +12,7 @@ import Moya
 protocol Networking {}
 
 extension Networking {
-    func request(target: MovieAPI, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (Error) -> Void) {
+    func request(target: MovieAPI, success successCallback: @escaping (MovieResponse) -> Void, error errorCallback: @escaping (Error) -> Void) {
         NetworkManager.shared.request(target: target, success: successCallback, error: errorCallback)
     }
 }
@@ -23,12 +23,20 @@ class NetworkManager {
     
     private let provider = MoyaProvider<MovieAPI>()
     
-    func request(target: MovieAPI, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (MoyaError) -> Void) {
+    func request(target: MovieAPI, success successCallback: @escaping (MovieResponse) -> Void, error errorCallback: @escaping (Error) -> Void) {
 
         provider.request(target) { (result) in
             switch result {
             case .success(let response):
-                successCallback(response)
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let results = try decoder.decode(MovieResponse.self, from: response.data)
+                    successCallback(results)
+                } catch let error {
+                    errorCallback(error)
+                }
+                
             case .failure(let error):
                 errorCallback(error)
             }
