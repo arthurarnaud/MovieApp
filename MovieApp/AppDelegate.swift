@@ -12,10 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tabBarController: MainTabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window?.backgroundColor = .white
+        
+        /// Send in the main tab bar controller, which can create our initial coordinators.
+        tabBarController = MainTabBarController()
+        window?.rootViewController = tabBarController
+
         return true
     }
 

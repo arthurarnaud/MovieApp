@@ -21,6 +21,20 @@
 		DA3764E922416EC700A4FC37 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764E822416EC700A4FC37 /* NetworkManager.swift */; };
 		DA3764EC22417BE700A4FC37 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764EB22417BE700A4FC37 /* Movie.swift */; };
 		DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764ED22417E4F00A4FC37 /* MovieResponse.swift */; };
+		DA3764F022428F8700A4FC37 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764EF22428F8700A4FC37 /* MainTabBarController.swift */; };
+		DA3764F3224290A000A4FC37 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764F2224290A000A4FC37 /* Networking.swift */; };
+		DA3764F5224290C000A4FC37 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764F4224290C000A4FC37 /* Coordinator.swift */; };
+		DA3764F82242913C00A4FC37 /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764F72242913C00A4FC37 /* CoordinatedNavigationController.swift */; };
+		DA376500224293AD00A4FC37 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764FF224293AD00A4FC37 /* DiscoverCoordinator.swift */; };
+		DA376502224293C200A4FC37 /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA376501224293C200A4FC37 /* NowPlayingCoordinator.swift */; };
+		DA376504224293CF00A4FC37 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA376503224293CF00A4FC37 /* SearchCoordinator.swift */; };
+		DA376506224293DF00A4FC37 /* UpcomingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA376505224293DF00A4FC37 /* UpcomingCoordinator.swift */; };
+		DA376508224293EF00A4FC37 /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA376507224293EF00A4FC37 /* AccountCoordinator.swift */; };
+		DA37650A2242985700A4FC37 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765092242985700A4FC37 /* DiscoverViewController.swift */; };
+		DA37650C2242986600A4FC37 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37650B2242986600A4FC37 /* NowPlayingViewController.swift */; };
+		DA37650E2242987200A4FC37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37650D2242987200A4FC37 /* SearchViewController.swift */; };
+		DA3765102242988100A4FC37 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37650F2242988100A4FC37 /* UpcomingViewController.swift */; };
+		DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765112242988E00A4FC37 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +81,20 @@
 		DA3764E822416EC700A4FC37 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DA3764EB22417BE700A4FC37 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		DA3764ED22417E4F00A4FC37 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		DA3764EF22428F8700A4FC37 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		DA3764F2224290A000A4FC37 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		DA3764F4224290C000A4FC37 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DA3764F72242913C00A4FC37 /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
+		DA3764FF224293AD00A4FC37 /* DiscoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoordinator.swift; sourceTree = "<group>"; };
+		DA376501224293C200A4FC37 /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
+		DA376503224293CF00A4FC37 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		DA376505224293DF00A4FC37 /* UpcomingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCoordinator.swift; sourceTree = "<group>"; };
+		DA376507224293EF00A4FC37 /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		DA3765092242985700A4FC37 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		DA37650B2242986600A4FC37 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		DA37650D2242987200A4FC37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DA37650F2242988100A4FC37 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		DA3765112242988E00A4FC37 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +160,9 @@
 		DA3764B62241619400A4FC37 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA3764F9224292AC00A4FC37 /* Activities */,
+				DA3764F6224290FD00A4FC37 /* Reusable */,
+				DA3764F12242908400A4FC37 /* Protocols */,
 				DA3764EA2241796D00A4FC37 /* Models */,
 				DA3764E522416A6F00A4FC37 /* Network */,
 				DA3764B72241619400A4FC37 /* AppDelegate.swift */,
@@ -140,6 +171,7 @@
 				DA3764BE2241619500A4FC37 /* Assets.xcassets */,
 				DA3764C02241619500A4FC37 /* LaunchScreen.storyboard */,
 				DA3764C32241619500A4FC37 /* Info.plist */,
+				DA3764EF22428F8700A4FC37 /* MainTabBarController.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -178,6 +210,80 @@
 				DA3764ED22417E4F00A4FC37 /* MovieResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DA3764F12242908400A4FC37 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA3764F2224290A000A4FC37 /* Networking.swift */,
+				DA3764F4224290C000A4FC37 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA3764F6224290FD00A4FC37 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				DA3764F72242913C00A4FC37 /* CoordinatedNavigationController.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		DA3764F9224292AC00A4FC37 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				DA3764FA224292EC00A4FC37 /* Discover */,
+				DA3764FB224292F400A4FC37 /* NowPlaying */,
+				DA3764FC224292FD00A4FC37 /* Search */,
+				DA3764FD2242930400A4FC37 /* Upcoming */,
+				DA3764FE2242930C00A4FC37 /* Account */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		DA3764FA224292EC00A4FC37 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				DA3764FF224293AD00A4FC37 /* DiscoverCoordinator.swift */,
+				DA3765092242985700A4FC37 /* DiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		DA3764FB224292F400A4FC37 /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				DA376501224293C200A4FC37 /* NowPlayingCoordinator.swift */,
+				DA37650B2242986600A4FC37 /* NowPlayingViewController.swift */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		DA3764FC224292FD00A4FC37 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DA376503224293CF00A4FC37 /* SearchCoordinator.swift */,
+				DA37650D2242987200A4FC37 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DA3764FD2242930400A4FC37 /* Upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				DA376505224293DF00A4FC37 /* UpcomingCoordinator.swift */,
+				DA37650F2242988100A4FC37 /* UpcomingViewController.swift */,
+			);
+			path = Upcoming;
+			sourceTree = "<group>";
+		};
+		DA3764FE2242930C00A4FC37 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				DA376507224293EF00A4FC37 /* AccountCoordinator.swift */,
+				DA3765112242988E00A4FC37 /* AccountViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		E008BD54B21EF85C41D3772F /* Pods */ = {
@@ -407,12 +513,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA376506224293DF00A4FC37 /* UpcomingCoordinator.swift in Sources */,
 				DA3764E922416EC700A4FC37 /* NetworkManager.swift in Sources */,
+				DA376504224293CF00A4FC37 /* SearchCoordinator.swift in Sources */,
 				DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */,
 				DA3764E722416B8F00A4FC37 /* MovieAPI.swift in Sources */,
+				DA37650A2242985700A4FC37 /* DiscoverViewController.swift in Sources */,
+				DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */,
+				DA376500224293AD00A4FC37 /* DiscoverCoordinator.swift in Sources */,
+				DA37650C2242986600A4FC37 /* NowPlayingViewController.swift in Sources */,
+				DA3764F3224290A000A4FC37 /* Networking.swift in Sources */,
+				DA3764F022428F8700A4FC37 /* MainTabBarController.swift in Sources */,
+				DA376502224293C200A4FC37 /* NowPlayingCoordinator.swift in Sources */,
 				DA3764BA2241619400A4FC37 /* ViewController.swift in Sources */,
+				DA3765102242988100A4FC37 /* UpcomingViewController.swift in Sources */,
+				DA37650E2242987200A4FC37 /* SearchViewController.swift in Sources */,
 				DA3764B82241619400A4FC37 /* AppDelegate.swift in Sources */,
 				DA3764EC22417BE700A4FC37 /* Movie.swift in Sources */,
+				DA3764F82242913C00A4FC37 /* CoordinatedNavigationController.swift in Sources */,
+				DA3764F5224290C000A4FC37 /* Coordinator.swift in Sources */,
+				DA376508224293EF00A4FC37 /* AccountCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
