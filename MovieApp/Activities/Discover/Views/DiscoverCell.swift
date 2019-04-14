@@ -10,41 +10,49 @@ import UIKit
 
 class DiscoverCell: BasicCell {
     
-    var todayItem: Movie! {
+    var movie: Movie! {
         didSet {
-//            imageView.image = todayItem.image
+            imageView.sd_setImage(with: NetworkManager.shared.getImageURL(for: movie.posterPath), completed: nil)
+            informationLabel.text = movie.title
         }
     }
     
-    let titleLabel = UILabel(text: "Movie Name", font: .boldSystemFont(ofSize: 28))
+    private let imageView = UIImageView()
+    private let informationLabel = UILabel()
+    private lazy var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradientLayer.locations = [0.5, 1.1]
+        gradientLayer.frame = self.bounds
+        return gradientLayer
+    }()
     
-    let imageView = UIImageView()
-    
-    var topConstraint: NSLayoutConstraint!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .white
-        layer.cornerRadius = 16
-        
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        
-        let imageContainerView = UIView()
-        imageContainerView.addSubview(imageView)
-        imageView.centerInSuperview(size: .init(width: 240, height: 240))
-        
-        let stackView = VerticalStackView(arrangedSubviews: [titleLabel, imageContainerView], spacing: 8)
-        addSubview(stackView)
-        
-//        stackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 24, bottom: 24, right: 24))
-//        self.topConstraint = stackView.topAnchor.constraint(equalTo: topAnchor, constant: 24)
-//        self.topConstraint.isActive = true
-        
-        stackView.fillSuperview(padding: .init(top: 24, left: 24, bottom: 24, right: 24))
+        setupLayout()
         
     }
+    
+    fileprivate func setupLayout() {
+        layer.cornerRadius = 16
+        clipsToBounds = true
+    
+        imageView.contentMode = .scaleAspectFill
+        addSubview(imageView)
+        imageView.fillSuperview()
+        
+        layer.addSublayer(gradientLayer)
+        
+        addSubview(informationLabel)
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 16, right: 16))
+        informationLabel.textColor = .white
+        informationLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 34, weight: .heavy)
+        informationLabel.numberOfLines = 0
+        
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError()

@@ -42,6 +42,7 @@
 		DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765112242988E00A4FC37 /* AccountViewController.swift */; };
 		DA3765152243FE9F00A4FC37 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */; };
 		DA3765172244062F00A4FC37 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765162244062F00A4FC37 /* DiscoverCell.swift */; };
+		DAA82A2E22636865004C251E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA82A2D22636865004C251E /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		DA3765112242988E00A4FC37 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		DA3765162244062F00A4FC37 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		DAA82A2D22636865004C251E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				DA08C99B22628FCA00E45B3A /* Views */,
 				DA3764FF224293AD00A4FC37 /* DiscoverCoordinator.swift */,
 				DA3765092242985700A4FC37 /* DiscoverViewController.swift */,
+				DAA82A2D22636865004C251E /* MovieDetailViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -531,12 +534,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -554,6 +559,7 @@
 				DA376506224293DF00A4FC37 /* UpcomingCoordinator.swift in Sources */,
 				DA3764E922416EC700A4FC37 /* NetworkManager.swift in Sources */,
 				DA3765172244062F00A4FC37 /* DiscoverCell.swift in Sources */,
+				DAA82A2E22636865004C251E /* MovieDetailViewController.swift in Sources */,
 				DA376504224293CF00A4FC37 /* SearchCoordinator.swift in Sources */,
 				DA3765152243FE9F00A4FC37 /* UIView+Constraints.swift in Sources */,
 				DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */,

@@ -13,6 +13,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     static let MovieAPIKey = "fb3efb05e2a2669024f48db596b3f3d0"
     
+    private let imageBaseURL = "https://image.tmdb.org/t/p/original"
     private let provider = MoyaProvider<MovieAPI>()
     
     func request<T: Codable>(target: MovieAPI, success successCallback: @escaping (T) -> Void, error errorCallback: @escaping (Error) -> Void) {
@@ -33,6 +34,13 @@ class NetworkManager {
                 errorCallback(error)
             }
         }
+    }
+    
+    func getImageURL(for path: String) -> URL {
+        guard let url = URL(string: imageBaseURL + path) else {
+            fatalError("baseURL could not be configured.")
+        }
+        return url
     }
 }
 
