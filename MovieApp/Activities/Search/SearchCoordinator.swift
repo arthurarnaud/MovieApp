@@ -19,6 +19,8 @@ class SearchCoordinator: Coordinator {
         let viewController = SearchViewController()
         let tabBarItem = UITabBarItem(title: "Search", image: UIImage(), tag: 3)
         viewController.tabBarItem = tabBarItem
+        navigationController.navigationBar.prefersLargeTitles = true
+        viewController.navigationItem.title = "Search"
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]
     }

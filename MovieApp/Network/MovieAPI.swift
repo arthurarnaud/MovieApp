@@ -14,12 +14,13 @@ enum MovieAPI {
     case popular(page: Int)
     case upcoming(page: Int)
     case recommended(id: Int)
+    case search(query:String, page:Int)
 }
 
 extension MovieAPI: TargetType {
     
     var baseURL: URL {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else {
+        guard let url = URL(string: "https://api.themoviedb.org/3/") else {
             fatalError("baseURL could not be configured.")
         }
         return url
@@ -28,13 +29,15 @@ extension MovieAPI: TargetType {
     var path: String {
         switch self {
         case .nowPlaying:
-            return "now_playing"
+            return "movie/now_playing"
         case .popular:
-            return "popular"
+            return "movie/popular"
         case .upcoming:
-            return "upcoming"
+            return "movie/upcoming"
         case .recommended(let id):
-            return "\(id)/recommendations"
+            return "movie/\(id)/recommendations"
+        case .search:
+            return  "search/movie"
         }
     }
 
@@ -52,6 +55,8 @@ extension MovieAPI: TargetType {
             return .requestParameters(parameters: ["page":page, "api_key": NetworkManager.MovieAPIKey], encoding: URLEncoding.queryString)
         case .recommended:
             return .requestParameters(parameters: ["api_key":  NetworkManager.MovieAPIKey], encoding: URLEncoding.queryString)
+        case .search(let query, let page):
+            return .requestParameters(parameters: ["api_key":  NetworkManager.MovieAPIKey,"query":query, "page": page, "include_adult": false], encoding: URLEncoding.queryString)
         }
     }
 

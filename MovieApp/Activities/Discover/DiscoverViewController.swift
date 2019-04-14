@@ -13,13 +13,17 @@ class DiscoverViewController: UICollectionViewController, UICollectionViewDelega
     
     var coordinator: DiscoverCoordinator?
     
-    var movies: [Movie] = [] {
+    private var movies: [Movie] = [] {
         didSet {
             collectionView.reloadData();
         }
     }
     
-    let cellId = "DiscoverCell"
+    private let cellId = "DiscoverCell"
+    
+    private var movieDetailController: MovieDetailViewController!
+    private var anchoredConstraints: AnchoredConstraints?
+    private var startingFrame: CGRect?
     
     init() {
         let layout = SnappingLayout()
@@ -59,7 +63,7 @@ class DiscoverViewController: UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // show Movie Detail
+        showMovieDetailFullscreen(indexPath: indexPath)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,5 +77,81 @@ class DiscoverViewController: UICollectionViewController, UICollectionViewDelega
         return .init(width: view.frame.width - 64, height: view.frame.height - 200)
     }
     
+    fileprivate func setupSingleAppFullscreenController(_ indexPath: IndexPath) {
+        let movieDetailController = MovieDetailViewController()
+        //movieDetailController.todayItem = items[indexPath.row]
+//        movieDetailController.dismissHandler = {
+//            self.handleAppFullscreenDismissal()
+//        }
+        
+        movieDetailController.view.layer.cornerRadius = 16
+        self.movieDetailController = movieDetailController
+        
+//        // #1 setup our pan gesture
+//        let gesture = UIPanGestureRecognizer(target: self, action: #selector(handleDrag))
+//        gesture.delegate = self
+//        movieDetailController.view.addGestureRecognizer(gesture)
+//
+//        // #2 add a blue effect view
+//
+//        // #3 not to interfere with our UITableView scrolling
+    }
     
+    fileprivate func setupStartingCellFrame(_ indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+        
+        // absolute coordindates of cell
+        guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else { return }
+        
+        self.startingFrame = startingFrame
+    }
+    
+    fileprivate func setupAppFullscreenStartingPosition(_ indexPath: IndexPath) {
+        let fullscreenView = movieDetailController.view!
+        view.addSubview(fullscreenView)
+        
+        addChild(movieDetailController)
+        
+        self.collectionView.isUserInteractionEnabled = false
+        
+        setupStartingCellFrame(indexPath)
+        
+        guard let startingFrame = self.startingFrame else { return }
+        
+        // auto layout constraint animations
+        // 4 anchors
+        
+        self.anchoredConstraints = fullscreenView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: startingFrame.origin.y, left: startingFrame.origin.x, bottom: 0, right: 0), size: .init(width: startingFrame.width, height: startingFrame.height))
+        
+        self.view.layoutIfNeeded()
+    }
+    
+    fileprivate func beginAnimationAppFullscreen() {
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+            
+            //self.blurVisualEffectView.alpha = 1
+            
+            self.anchoredConstraints?.top?.constant = 0
+            self.anchoredConstraints?.leading?.constant = 0
+            self.anchoredConstraints?.width?.constant = self.view.frame.width
+            self.anchoredConstraints?.height?.constant = self.view.frame.height
+            
+            self.view.layoutIfNeeded()
+            
+            self.tabBarController?.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+            
+//            guard let cell = self.appFullscreenController.tableView.cellForRow(at: [0, 0]) as? MovieDetailViewController else { return }
+//
+//            cell.todayCell.topConstraint.constant = 48
+//            cell.layoutIfNeeded()
+            
+            
+        }, completion: nil)
+    }
+    
+    fileprivate func showMovieDetailFullscreen(indexPath: IndexPath) {
+        setupSingleAppFullscreenController(indexPath)
+        setupAppFullscreenStartingPosition(indexPath)
+        beginAnimationAppFullscreen()
+    }
 }

@@ -43,6 +43,7 @@
 		DA3765152243FE9F00A4FC37 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */; };
 		DA3765172244062F00A4FC37 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765162244062F00A4FC37 /* DiscoverCell.swift */; };
 		DAA82A2E22636865004C251E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA82A2D22636865004C251E /* MovieDetailViewController.swift */; };
+		DAA82A3122638CD0004C251E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA82A3022638CD0004C251E /* SearchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		DA3765162244062F00A4FC37 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		DAA82A2D22636865004C251E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		DAA82A3022638CD0004C251E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 		DA3764FC224292FD00A4FC37 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DAA82A2F22638CAA004C251E /* Views */,
 				DA376503224293CF00A4FC37 /* SearchCoordinator.swift */,
 				DA37650D2242987200A4FC37 /* SearchViewController.swift */,
 			);
@@ -324,6 +327,14 @@
 				DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAA82A2F22638CAA004C251E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAA82A3022638CD0004C251E /* SearchCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E008BD54B21EF85C41D3772F /* Pods */ = {
@@ -564,6 +575,7 @@
 				DA3765152243FE9F00A4FC37 /* UIView+Constraints.swift in Sources */,
 				DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */,
 				DA3764E722416B8F00A4FC37 /* MovieAPI.swift in Sources */,
+				DAA82A3122638CD0004C251E /* SearchCell.swift in Sources */,
 				DA37650A2242985700A4FC37 /* DiscoverViewController.swift in Sources */,
 				DA08C99422626A3100E45B3A /* SnappingLayout.swift in Sources */,
 				DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */,
