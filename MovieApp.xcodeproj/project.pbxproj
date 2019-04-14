@@ -10,6 +10,11 @@
 		0FC5AFEB0DAC57CC9AA3D117 /* Pods_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C5564458312BF709A29E3A /* Pods_MovieAppUITests.framework */; };
 		1EED8A57A3743FFD5EFC97E6 /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B7A4B25684D7792D65867B /* Pods_MovieAppTests.framework */; };
 		AC8A545E41BFC2D995D603DA /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83655A8BD965D4FE1FF195EB /* Pods_MovieApp.framework */; };
+		DA08C9922262697100E45B3A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C9912262697100E45B3A /* BasicCell.swift */; };
+		DA08C99422626A3100E45B3A /* SnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99322626A3100E45B3A /* SnappingLayout.swift */; };
+		DA08C99622628D0F00E45B3A /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99522628D0F00E45B3A /* VerticalStackView.swift */; };
+		DA08C99822628E1E00E45B3A /* UILabel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */; };
+		DA08C99A22628F6000E45B3A /* BasicListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99922628F6000E45B3A /* BasicListController.swift */; };
 		DA3764B82241619400A4FC37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764B72241619400A4FC37 /* AppDelegate.swift */; };
 		DA3764BA2241619400A4FC37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764B92241619400A4FC37 /* ViewController.swift */; };
 		DA3764BD2241619400A4FC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3764BB2241619400A4FC37 /* Main.storyboard */; };
@@ -35,6 +40,8 @@
 		DA37650E2242987200A4FC37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37650D2242987200A4FC37 /* SearchViewController.swift */; };
 		DA3765102242988100A4FC37 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37650F2242988100A4FC37 /* UpcomingViewController.swift */; };
 		DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765112242988E00A4FC37 /* AccountViewController.swift */; };
+		DA3765152243FE9F00A4FC37 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */; };
+		DA3765172244062F00A4FC37 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765162244062F00A4FC37 /* DiscoverCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,11 @@
 		A65DEC05D8C04F31781D63C7 /* Pods-MovieAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppUITests/Pods-MovieAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A970B60201FC528010151372 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CEC39122777939776679D541 /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA08C9912262697100E45B3A /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		DA08C99322626A3100E45B3A /* SnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingLayout.swift; sourceTree = "<group>"; };
+		DA08C99522628D0F00E45B3A /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Helpers.swift"; sourceTree = "<group>"; };
+		DA08C99922628F6000E45B3A /* BasicListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicListController.swift; sourceTree = "<group>"; };
 		DA3764B42241619400A4FC37 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3764B72241619400A4FC37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3764B92241619400A4FC37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +107,8 @@
 		DA37650D2242987200A4FC37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DA37650F2242988100A4FC37 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		DA3765112242988E00A4FC37 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		DA3765162244062F00A4FC37 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +149,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA08C99B22628FCA00E45B3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA3765162244062F00A4FC37 /* DiscoverCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DA3764AB2241619400A4FC37 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3764F9224292AC00A4FC37 /* Activities */,
+				DA3765132243FE6900A4FC37 /* Extensions */,
 				DA3764F6224290FD00A4FC37 /* Reusable */,
 				DA3764F12242908400A4FC37 /* Protocols */,
 				DA3764EA2241796D00A4FC37 /* Models */,
@@ -225,6 +248,10 @@
 			isa = PBXGroup;
 			children = (
 				DA3764F72242913C00A4FC37 /* CoordinatedNavigationController.swift */,
+				DA08C9912262697100E45B3A /* BasicCell.swift */,
+				DA08C99322626A3100E45B3A /* SnappingLayout.swift */,
+				DA08C99522628D0F00E45B3A /* VerticalStackView.swift */,
+				DA08C99922628F6000E45B3A /* BasicListController.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -244,6 +271,7 @@
 		DA3764FA224292EC00A4FC37 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				DA08C99B22628FCA00E45B3A /* Views */,
 				DA3764FF224293AD00A4FC37 /* DiscoverCoordinator.swift */,
 				DA3765092242985700A4FC37 /* DiscoverViewController.swift */,
 			);
@@ -284,6 +312,15 @@
 				DA3765112242988E00A4FC37 /* AccountViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		DA3765132243FE6900A4FC37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */,
+				DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E008BD54B21EF85C41D3772F /* Pods */ = {
@@ -513,12 +550,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA08C9922262697100E45B3A /* BasicCell.swift in Sources */,
 				DA376506224293DF00A4FC37 /* UpcomingCoordinator.swift in Sources */,
 				DA3764E922416EC700A4FC37 /* NetworkManager.swift in Sources */,
+				DA3765172244062F00A4FC37 /* DiscoverCell.swift in Sources */,
 				DA376504224293CF00A4FC37 /* SearchCoordinator.swift in Sources */,
+				DA3765152243FE9F00A4FC37 /* UIView+Constraints.swift in Sources */,
 				DA3764EE22417E4F00A4FC37 /* MovieResponse.swift in Sources */,
 				DA3764E722416B8F00A4FC37 /* MovieAPI.swift in Sources */,
 				DA37650A2242985700A4FC37 /* DiscoverViewController.swift in Sources */,
+				DA08C99422626A3100E45B3A /* SnappingLayout.swift in Sources */,
 				DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */,
 				DA376500224293AD00A4FC37 /* DiscoverCoordinator.swift in Sources */,
 				DA37650C2242986600A4FC37 /* NowPlayingViewController.swift in Sources */,
@@ -528,8 +569,11 @@
 				DA3764BA2241619400A4FC37 /* ViewController.swift in Sources */,
 				DA3765102242988100A4FC37 /* UpcomingViewController.swift in Sources */,
 				DA37650E2242987200A4FC37 /* SearchViewController.swift in Sources */,
+				DA08C99622628D0F00E45B3A /* VerticalStackView.swift in Sources */,
+				DA08C99822628E1E00E45B3A /* UILabel+Helpers.swift in Sources */,
 				DA3764B82241619400A4FC37 /* AppDelegate.swift in Sources */,
 				DA3764EC22417BE700A4FC37 /* Movie.swift in Sources */,
+				DA08C99A22628F6000E45B3A /* BasicListController.swift in Sources */,
 				DA3764F82242913C00A4FC37 /* CoordinatedNavigationController.swift in Sources */,
 				DA3764F5224290C000A4FC37 /* Coordinator.swift in Sources */,
 				DA376508224293EF00A4FC37 /* AccountCoordinator.swift in Sources */,

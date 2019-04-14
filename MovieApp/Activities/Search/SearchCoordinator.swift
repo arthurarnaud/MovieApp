@@ -17,8 +17,7 @@ class SearchCoordinator: Coordinator {
         navigationController.coordinator = self
         
         let viewController = SearchViewController()
-        let tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "search"), tag: 3)
-        tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+        let tabBarItem = UITabBarItem(title: "Search", image: UIImage(), tag: 3)
         viewController.tabBarItem = tabBarItem
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]

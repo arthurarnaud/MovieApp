@@ -17,9 +17,9 @@ class DiscoverCoordinator: Coordinator {
         navigationController.coordinator = self
         
         let viewController = DiscoverViewController()
-        let tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "discover"), tag: 1)
-        tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+        let tabBarItem = UITabBarItem(title: "Discover", image: UIImage(), tag: 1)
         viewController.tabBarItem = tabBarItem
+        navigationController.isNavigationBarHidden = true
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]
     }

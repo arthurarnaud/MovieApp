@@ -17,8 +17,7 @@ class NowPlayingCoordinator: Coordinator {
         navigationController.coordinator = self
         
         let viewController = NowPlayingViewController()
-        let tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "now_playing"), tag: 2)
-        tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+        let tabBarItem = UITabBarItem(title: "New", image: UIImage(), tag: 2)
         viewController.tabBarItem = tabBarItem
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]
