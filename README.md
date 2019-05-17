@@ -1,6 +1,6 @@
 # MovieApp
 
-MovieApp in an app to help you discover and find new movies. It provides you with all the information about the movie (summary, actors, trailers ...)
+MovieApp is an app to help you discover and find new movies. It provides you with all the information about the movie (summary, actors, trailers ...).
 
 ## Architecture
 
