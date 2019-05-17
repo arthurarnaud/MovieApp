@@ -12,10 +12,19 @@ struct AnchoredConstraints {
     var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
 }
 
-// Set constraints programmatically more easily
-// Extension by Brian Voong, Reference Video: https://youtu.be/iqpAP7s3b-8
-
+// Extension to set contraint more easily on an UIView
 extension UIView {
+    
+    /**
+     Helper to set all major constraints on an UIView
+     
+     - Parameter top: The Top constraint
+     - Parameter leading: The Left constraint
+     - Parameter bottom: The Bottom constraint
+     - Parameter right: The Right constraint
+     - Parameter padding: Pass a UIEdgeInset to set padding from the superview
+     - Parameter size: Pass a CGSize to constraint the size of the view
+     */
     
     @discardableResult
     func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) -> AnchoredConstraints {
@@ -52,6 +61,12 @@ extension UIView {
         return anchoredConstraints
     }
     
+    /**
+     Set the constraints for a View to fill the superview
+     
+     - Parameter padding: Pass a UIEdgeInset to set padding from the superview
+    */
+    
     func fillSuperview(padding: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewTopAnchor = superview?.topAnchor {
@@ -70,6 +85,12 @@ extension UIView {
             trailingAnchor.constraint(equalTo: superviewTrailingAnchor, constant: -padding.right).isActive = true
         }
     }
+    
+    /**
+     Set the constraints for a View to center the superview
+     
+     - Parameter size: Pass a CGSize to constraint the size of the view
+    */
     
     func centerInSuperview(size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false

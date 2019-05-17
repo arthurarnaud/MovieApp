@@ -13,15 +13,23 @@ class SearchCoordinator: Coordinator {
     var navigationController: CoordinatedNavigationController
     
     init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController()) {
+        
+        // Setup  NavigationController Coordinator
         self.navigationController = navigationController
         navigationController.coordinator = self
         
+        // Setup  ViewController Coordinator
         let viewController = SearchViewController()
+        viewController.coordinator = self
+        
+        // Setup TabBar
         let tabBarItem = UITabBarItem(title: "Search", image: UIImage(), tag: 3)
         viewController.tabBarItem = tabBarItem
+        
+        // Setup NavigationBar
         navigationController.navigationBar.prefersLargeTitles = true
         viewController.navigationItem.title = "Search"
-        viewController.coordinator = self
+        
         navigationController.viewControllers = [viewController]
     }
 }

@@ -15,6 +15,8 @@
 		DA08C99622628D0F00E45B3A /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99522628D0F00E45B3A /* VerticalStackView.swift */; };
 		DA08C99822628E1E00E45B3A /* UILabel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */; };
 		DA08C99A22628F6000E45B3A /* BasicListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA08C99922628F6000E45B3A /* BasicListController.swift */; };
+		DA24C83F226BABF400A1C768 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA24C83E226BABF400A1C768 /* UICollectionView+Helpers.swift */; };
+		DA24C841226D36E300A1C768 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA24C840226D36E300A1C768 /* UIViewController+Helpers.swift */; };
 		DA3764B82241619400A4FC37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764B72241619400A4FC37 /* AppDelegate.swift */; };
 		DA3764BA2241619400A4FC37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3764B92241619400A4FC37 /* ViewController.swift */; };
 		DA3764BD2241619400A4FC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3764BB2241619400A4FC37 /* Main.storyboard */; };
@@ -44,6 +46,7 @@
 		DA3765172244062F00A4FC37 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3765162244062F00A4FC37 /* DiscoverCell.swift */; };
 		DAA82A2E22636865004C251E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA82A2D22636865004C251E /* MovieDetailViewController.swift */; };
 		DAA82A3122638CD0004C251E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA82A3022638CD0004C251E /* SearchCell.swift */; };
+		DAF7DBCF2264B623002B4DD3 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7DBCE2264B623002B4DD3 /* MovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,8 @@
 		DA08C99522628D0F00E45B3A /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Helpers.swift"; sourceTree = "<group>"; };
 		DA08C99922628F6000E45B3A /* BasicListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicListController.swift; sourceTree = "<group>"; };
+		DA24C83E226BABF400A1C768 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
+		DA24C840226D36E300A1C768 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
 		DA3764B42241619400A4FC37 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3764B72241619400A4FC37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3764B92241619400A4FC37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 		DA3765162244062F00A4FC37 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		DAA82A2D22636865004C251E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		DAA82A3022638CD0004C251E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		DAF7DBCE2264B623002B4DD3 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +304,7 @@
 				DAA82A2F22638CAA004C251E /* Views */,
 				DA376503224293CF00A4FC37 /* SearchCoordinator.swift */,
 				DA37650D2242987200A4FC37 /* SearchViewController.swift */,
+				DAF7DBCE2264B623002B4DD3 /* MovieViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -325,6 +332,8 @@
 			children = (
 				DA3765142243FE9F00A4FC37 /* UIView+Constraints.swift */,
 				DA08C99722628E1E00E45B3A /* UILabel+Helpers.swift */,
+				DA24C83E226BABF400A1C768 /* UICollectionView+Helpers.swift */,
+				DA24C840226D36E300A1C768 /* UIViewController+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -577,6 +586,7 @@
 				DA3764E722416B8F00A4FC37 /* MovieAPI.swift in Sources */,
 				DAA82A3122638CD0004C251E /* SearchCell.swift in Sources */,
 				DA37650A2242985700A4FC37 /* DiscoverViewController.swift in Sources */,
+				DAF7DBCF2264B623002B4DD3 /* MovieViewController.swift in Sources */,
 				DA08C99422626A3100E45B3A /* SnappingLayout.swift in Sources */,
 				DA3765122242988E00A4FC37 /* AccountViewController.swift in Sources */,
 				DA376500224293AD00A4FC37 /* DiscoverCoordinator.swift in Sources */,
@@ -585,6 +595,8 @@
 				DA3764F022428F8700A4FC37 /* MainTabBarController.swift in Sources */,
 				DA376502224293C200A4FC37 /* NowPlayingCoordinator.swift in Sources */,
 				DA3764BA2241619400A4FC37 /* ViewController.swift in Sources */,
+				DA24C841226D36E300A1C768 /* UIViewController+Helpers.swift in Sources */,
+				DA24C83F226BABF400A1C768 /* UICollectionView+Helpers.swift in Sources */,
 				DA3765102242988100A4FC37 /* UpcomingViewController.swift in Sources */,
 				DA37650E2242987200A4FC37 /* SearchViewController.swift in Sources */,
 				DA08C99622628D0F00E45B3A /* VerticalStackView.swift in Sources */,

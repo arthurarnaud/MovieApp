@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Extension to provide a convenience init for UILabel
 extension UILabel {
     convenience init(text: String, font: UIFont, numberOfLines: Int = 1) {
         self.init(frame: .zero)
